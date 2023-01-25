@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
-const words = ['javascript', 'python', 'java', 'c++', 'c#'];
+import './Algorithm.css';
+const words = ['javascript', 'python', 'java', 'can', 'cause'];
+
 const Algorithm = () => {
   const [guessedLetters, setGuessedLetters] = useState([]);
   const [misses, setMisses] = useState([]);
   const [displayWord, setDisplayWord] = useState("");
   const [randomWord, setRandomWord] = useState("");
   const maxGuesses = 6;
+
   useEffect(() => {
     setRandomWord(words[Math.floor(Math.random() * words.length)])
     setDisplayWord(randomWord.replace(/[a-zA-Z]/g, "_"))
@@ -23,9 +26,17 @@ const Algorithm = () => {
     setGuessedLetters([...guessedLetters, letter]);
     // check if the letter is in the word
     if (randomWord.includes(letter)) {
-      setDisplayWord(
-        displayWord.split("").map((char, i) => (randomWord[i] === letter ? letter : char)).join("")
-      );
+      let newDisplayWord = '';
+      for (let i = 0; i < randomWord.length; i++) {
+        if (randomWord[i] === letter) {
+          newDisplayWord += letter;
+        } else if (guessedLetters.includes(randomWord[i])) {
+          newDisplayWord += randomWord[i];
+        } else {
+          newDisplayWord += '_';
+        }
+      }
+      setDisplayWord(newDisplayWord);
     } else {
       setMisses([...misses, letter]);
     }
@@ -40,17 +51,17 @@ const Algorithm = () => {
   };
 
   if (misses.length === maxGuesses) {
-    return <div>You Lost! The word was: {randomWord} <button onClick={handleReset}>Play Again</button> </div>;
+    return <div className='result'>You Lost! The word was: {randomWord} <button onClick={handleReset}>Play Again</button> </div>;
   }
   if (displayWord === randomWord) {
-    return <div>You Won! The word was: {randomWord} <button onClick={handleReset}>Play Again</button> </div>;
+    return <div className='result'>You Won! The word was: {randomWord} <button onClick={handleReset}>Play Again</button> </div>;
   }
 
   return (
     <div>
-      <div>Word: {displayWord}</div>
-      <div>Misses: {misses.join(" ")}</div>
-      <form onSubmit={handleGuess}>
+      <div className='word'>Word: {displayWord}</div>
+      <div className='misses'>Misses: {misses.join(" ")}</div>
+      <form className='guess-form' onSubmit={handleGuess}>
         <label>
           Guess:
           <input type="text" name="letter" maxLength={1} />
@@ -60,5 +71,5 @@ const Algorithm = () => {
       </form>
     </div>
   );
-}
-export default Algorithm;
+  };
+  export default Algorithm;

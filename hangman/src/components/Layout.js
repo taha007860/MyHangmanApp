@@ -1,12 +1,15 @@
 import React from 'react';
 import Algorithm from './Algorithm';
+import Center from './Center';
 
 const Layout = () => {
   return (
-    <div>
+      <div>
       <h1>Welcome to the Hangman Game</h1>
+      <Center>
       <Algorithm />
-    </div>
+      </Center>
+      </div>
   );
 }
 
