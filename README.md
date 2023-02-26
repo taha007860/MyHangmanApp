@@ -82,4 +82,6 @@ With Hangman, you can enjoy a classic word-guessing game that's easy to play and
 
 # Features
 Hangman Game includes several components and game mechanics that work together to create a fun and engaging gaming experience:
-***Figure Component:** The Figure component displays the hangman image, with different parts of the figure appearing as the player makes incorrect guesses.
+- **Figure Component:** The Figure component displays the hangman image, with different parts of the figure appearing as the player makes incorrect guesses.
+- **Header Component:** The Header component displays the game's title and challenges players to find the hidden word by entering letters. Good luck! 🤞
+- **Notification Component:** The Notification component displays messages to the player throughout the game. If the player has already entered a letter, the component displays an alert informing the player that the letter has already been entered. This can help players avoid repeating guesses and save time. The component also displays notifications for when the game is won or lost.
