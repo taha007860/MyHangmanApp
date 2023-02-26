@@ -1,7 +1,5 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import { useState, useEffect } from 'react';
-import Layout from './components/Layout';
 import Header from './components/Header';
 import Figure from './components/Figure';
 import WrongLetters from './components/WrongLetters';
