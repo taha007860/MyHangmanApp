@@ -78,3 +78,8 @@ This game's implementation offers a user-friendly interface that allows players 
 In the future, Hangman will be expanded to include even more features. Planned enhancements include the integration of HackerRank challenges into the game. Players will have to solve HackerRank problems to earn letters that can be used to help solve the hangman puzzle. This integration will increase the game's engagement and educational value for those looking to improve their algorithm and data structure skills.
 
 With Hangman, you can enjoy a classic word-guessing game that's easy to play and hard to put down. And with planned enhancements, the game will only get better and more challenging over time.
+
+
+# Features
+Hangman Game includes several components and game mechanics that work together to create a fun and engaging gaming experience:
+***Figure Component:** The Figure component displays the hangman image, with different parts of the figure appearing as the player makes incorrect guesses.
