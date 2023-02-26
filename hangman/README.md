@@ -82,4 +82,4 @@ With Hangman, you can enjoy a classic word-guessing game that's easy to play and
 
 # Features
 Hangman Game includes several components and game mechanics that work together to create a fun and engaging gaming experience:
-***Figure Component:** The Figure component displays the hangman image, with different parts of the figure appearing as the player makes incorrect guesses.
+- **Figure Component:** The Figure component displays the hangman image, with different parts of the figure appearing as the player makes incorrect guesses.
