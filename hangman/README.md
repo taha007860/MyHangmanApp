@@ -70,7 +70,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 
-#Project Description:
+# Project Description:
 Hangman is a fun and interactive word-guessing game. It was created using React JS. The game challenges players to guess a secret word by guessing one letter at a time. Before the man is hanged, players have a limited number of chances to guess the correct letters; otherwise, the hangman is fully drawn, resulting in a GAME OVER.
 
 This game's implementation offers a user-friendly interface that allows players to easily enter their guesses and track their progress. The game also includes different word lengths and categories to keep players involved and challenged.
